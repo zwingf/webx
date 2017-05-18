@@ -1,0 +1,35 @@
+$page.setTitle("档案管理列表")
+<p>$test</p>
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+    <tr bgcolor="#DDDDDD">
+        <th>档案编号</th>
+        <th>档案类别ID</th>
+        <th>档案类别</th>
+        <th>档案提交时间</th>
+        <th>档案最后一次修改时间</th>
+        <th>档案提供者id</th>
+        <th>档案提供者</th>
+        <th>当前用户id</th>
+        <th>当前用户name</th>
+    </tr>
+
+    <tr>
+        <td>$files.filesId</td>
+
+        <td>$files.filesClassId</td>
+
+        <td>$files.filesClassName</td>
+
+        <td>$files.filesTime</td>
+
+        <td>$files.filesLasttime</td>
+
+        <td>$files.filesProviderid</td>
+
+        <td>$files.filesProvider</td>
+
+        <td>$files.userId</td>
+
+        <td>$files.userName</td>
+    </tr>
+</table>

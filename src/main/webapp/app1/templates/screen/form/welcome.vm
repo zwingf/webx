@@ -1,0 +1,11 @@
+$page.setTitle("Welcome, $name")
+<p>欢迎你:$!name</p>
+<p>类型:$!leixing</p>
+    #if($!leixing=="员工")
+        <a href="../activiti/activityQingjia">请假</a>
+    #end
+    #if($!leixing=="领导")
+        <a href="../activiti/activityShenpi">待审批</a>
+        <a href="../activiti/activityFabu">发布流程规则（已经发布过了，别点）</a>
+    #end
+    <a href="../files/filesManage">档案管理</a>

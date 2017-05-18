@@ -1,0 +1,40 @@
+$page.setTitle("login")
+
+<form action="$app1Link.setTarget("form/login")" method="post">
+    $csrfToken.hiddenField
+    <input type="hidden" name="action" value="login_action"/>
+
+    #set ($group = $form.login.defaultInstance)
+
+    <p>Hello, what's your name?</p>
+
+    #if (!$group.user_name.valid)
+        <p>$!group.user_name.message</p>
+    #end
+    #if (!$group.user_password.valid)
+        <p>$!group.user_password.message</p>
+    #end
+
+
+    <p>用户名<input type="text" name="$group.user_name.key" /></p>
+    <p>密　码<input type="password" name="$group.user_password.key" /></p>
+    <p><input type="submit" name="event_submit_do_login"/></p>
+    <table>
+        <tr>
+            <td>用户名</td>
+            <td>密码</td>
+            <td>类型</td>
+        </tr>
+        <tr>
+            <td>hanxu1216</td>
+            <td>253302530</td>
+            <td>领导</td>
+        </tr>
+        <tr>
+            <td>yuangong</td>
+            <td>253302530</td>
+            <td>员工</td>
+        </tr>
+    </table>
+
+</form>

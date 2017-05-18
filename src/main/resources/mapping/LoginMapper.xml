@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.alibaba.webx3.app1.dao.LoginMapper">
+    <select id="login" parameterType="com.alibaba.webx3.app1.entity.User" resultType="com.alibaba.webx3.app1.entity.User">
+        select * from t_user where user_name = #{user_name} and user_password = #{user_password}
+    </select>
+
+</mapper>
